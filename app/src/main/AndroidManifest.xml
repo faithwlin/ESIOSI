@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Progress"></activity>
+        <activity android:name=".LessonApplication"></activity>
+        <activity android:name=".LessonPresentation" />
+        <activity android:name=".LessonSession" />
+        <activity android:name=".LessonTransport" />
+        <activity android:name=".LessonNetwork" />
+        <activity android:name=".LessonDatalink" />
+        <activity android:name=".LessonPhysical" />
+        <activity android:name=".Progress" />
         <activity android:name=".Profile" />
         <activity android:name=".Quiz" />
         <activity android:name=".Flashcards" />

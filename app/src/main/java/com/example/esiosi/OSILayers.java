@@ -40,13 +40,14 @@ public class OSILayers extends AppCompatActivity implements View.OnClickListener
         Intent i;
 
         switch (v.getId()){
-            case R.id.physicalcard : i = new Intent(this, LessonPhysical.class);
-            case R.id.datalinkcard : i = new Intent(this, LessonDatalink.class);
-            case R.id.networkcard : i = new Intent(this, LessonNetwork.class);
-            case R.id.transportcard : i = new Intent(this, LessonTransport.class);
-            case R.id.sessioncard : i = new Intent(this, LessonSession.class);
-            case R.id.presentationcard : i = new Intent(this, LessonPresentation.class);
-            case R.id.applicationcard : i = new Intent(this, LessonApplication.class);
+            case R.id.physicalcard : i = new Intent(this, LessonPhysical.class); startActivity(i); break;
+            case R.id.datalinkcard : i = new Intent(this, LessonDatalink.class); startActivity(i); break;
+            case R.id.networkcard : i = new Intent(this, LessonNetwork.class); startActivity(i); break;
+            case R.id.transportcard : i = new Intent(this, LessonTransport.class); startActivity(i); break;
+            case R.id.sessioncard : i = new Intent(this, LessonSession.class); startActivity(i); break;
+            case R.id.presentationcard : i = new Intent(this, LessonPresentation.class); startActivity(i); break;
+            case R.id.applicationcard : i = new Intent(this, LessonApplication.class); startActivity(i); break;
+            default:break;
         }
 
     }

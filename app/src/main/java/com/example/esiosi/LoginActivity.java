@@ -102,6 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Name.setText(name);
             Email.setText(email);
             updateUI(true);
+
         }
         else
         {

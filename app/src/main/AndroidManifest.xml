@@ -16,6 +16,13 @@
         <activity android:name=".Quiz" />
         <activity android:name=".Flashcards" />
         <activity android:name=".OSILayers" />
+        <activity android:name=".LessonPhysical" />
+        <activity android:name=".LessonDatalink" />
+        <activity android:name=".LessonNetwork" />
+        <activity android:name=".LessonTransport" />
+        <activity android:name=".LessonSession" />
+        <activity android:name=".LessonPresentation" />
+        <activity android:name=".LessonApplication" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

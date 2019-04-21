@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alignmentMode="alignMargins"
+            android:layout_margin="20dp"
             android:columnCount="2"
             android:rowCount="4"
             android:columnOrderPreserved="false">
@@ -30,8 +31,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -42,8 +44,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/arp" />
 
                 </LinearLayout>
@@ -60,8 +62,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -72,8 +75,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/icmp" />
 
                 </LinearLayout>
@@ -90,8 +93,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -102,8 +106,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/mac" />
 
 
@@ -121,8 +125,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -133,8 +138,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/tcp" />
 
                 </LinearLayout>
@@ -151,8 +156,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -163,8 +169,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/udp" />
 
 
@@ -182,8 +188,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -194,8 +201,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/dhcp" />
 
                 </LinearLayout>
@@ -212,8 +219,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -224,8 +232,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/dns" />
 
 
@@ -243,8 +251,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="25dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardBackgroundColor="#3BA4FF"
                 app:cardElevation="0dp">
 
                 <LinearLayout
@@ -255,8 +264,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="149dp"
-                        android:layout_height="120dp"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/http" />
 
                 </LinearLayout>

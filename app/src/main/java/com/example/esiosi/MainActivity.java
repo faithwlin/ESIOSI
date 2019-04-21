@@ -5,11 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CardView osiLayersCard, flashcardsCard, quizCard, myprogressCard, myprofileCard;
-
+    private TextView name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         quizCard.setOnClickListener(this);
         myprogressCard.setOnClickListener(this);
         myprofileCard.setOnClickListener(this);
+
+//        //define and set name in TextView
+//        name = findViewById(R.id.name);
+//        Intent i = getIntent();
+//        String i_name = i.getStringExtra("p_name");
+//        name.setText(i_name);
     }
 
     @Override

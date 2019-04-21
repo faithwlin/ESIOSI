@@ -77,7 +77,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
     private void enter()
     {
+
         startActivity(new Intent (LoginActivity.this, MainActivity.class));
+
     }
     private void signIn()
     {

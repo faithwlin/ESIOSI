@@ -12,5 +12,9 @@ public class Flashcards extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flashcards);
+
+        arpCard = (CardView) findViewById(R.id.arpcard);
+
+
     }
 }

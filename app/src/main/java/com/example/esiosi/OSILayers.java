@@ -5,50 +5,52 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageView;
 
 public class OSILayers extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView physicalCard, datalinkCard, networkCard, transportCard, sessionCard, presentationCard, applicationCard;
+    private ImageView physicalImage, datalinkImage, networkImage, transportImage, sessionImage, presentationImage, applicationImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_osilayers);
 
-        // Define the cards
-        physicalCard = (CardView) findViewById(R.id.physicalcard);
-        datalinkCard = (CardView) findViewById(R.id.datalinkcard);
-        networkCard = (CardView) findViewById(R.id.networkcard);
-        transportCard = (CardView) findViewById(R.id.transportcard);
-        sessionCard = (CardView) findViewById(R.id.sessioncard);
-        presentationCard = (CardView) findViewById(R.id.presentationcard);
-        applicationCard = (CardView) findViewById(R.id.applicationcard);
+        //Define ImageButtons
+        physicalImage = (ImageView) findViewById(R.id.physicalimage);
+        datalinkImage = (ImageView) findViewById(R.id.datalinkimage);
+        networkImage = (ImageView) findViewById(R.id.networkimage);
+        transportImage = (ImageView) findViewById(R.id.transportimage);
+        sessionImage = (ImageView) findViewById(R.id.sessionimage);
+        presentationImage = (ImageView) findViewById(R.id.presentationimage);
+        applicationImage = (ImageView) findViewById(R.id.applicationimage);
 
-        // Add Click Listener to the cards
-        physicalCard.setOnClickListener(this);
-        datalinkCard.setOnClickListener(this);
-        networkCard.setOnClickListener(this);
-        transportCard.setOnClickListener(this);
-        sessionCard.setOnClickListener(this);
-        presentationCard.setOnClickListener(this);
-        applicationCard.setOnClickListener(this);
+        //Add click listener to image views
+        physicalImage.setOnClickListener(this);
+        datalinkImage.setOnClickListener(this);
+        networkImage.setOnClickListener(this);
+        transportImage.setOnClickListener(this);
+        sessionImage.setOnClickListener(this);
+        presentationImage.setOnClickListener(this);
+        applicationImage.setOnClickListener(this);
+
     }
 
     @Override
-    // OnClick method will be called when a cardview is clicked
+    //On click method will be called when a cardview is clicked
     public void onClick(View v) {
         Intent i;
 
         switch (v.getId()){
-            case R.id.physicalcard : i = new Intent(this, LessonPhysical.class); startActivity(i); break;
-            case R.id.datalinkcard : i = new Intent(this, LessonDatalink.class); startActivity(i); break;
-            case R.id.networkcard : i = new Intent(this, LessonNetwork.class); startActivity(i); break;
-            case R.id.transportcard : i = new Intent(this, LessonTransport.class); startActivity(i); break;
-            case R.id.sessioncard : i = new Intent(this, LessonSession.class); startActivity(i); break;
-            case R.id.presentationcard : i = new Intent(this, LessonPresentation.class); startActivity(i); break;
-            case R.id.applicationcard : i = new Intent(this, LessonApplication.class); startActivity(i); break;
-            default:break;
+            case R.id.physicalimage : i = new Intent(this, LessonPhysical.class); startActivity(i); break;
+            case R.id.datalinkimage : i = new Intent(this, LessonDatalink.class); startActivity(i); break;
+            case R.id.networkimage : i = new Intent(this, LessonNetwork.class); startActivity(i); break;
+            case R.id.transportimage : i = new Intent(this, LessonTransport.class); startActivity(i); break;
+            case R.id.sessionimage : i = new Intent(this, LessonSession.class); startActivity(i); break;
+            case R.id.presentationimage : i = new Intent(this, LessonPresentation.class); startActivity(i); break;
+            case R.id.applicationimage : i = new Intent(this, LessonApplication.class); startActivity(i); break;
         }
 
     }
 }
+

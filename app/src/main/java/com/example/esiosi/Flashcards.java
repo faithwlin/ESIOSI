@@ -40,7 +40,7 @@ public class Flashcards extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                showFlashcardDialog(Flashcards.this, "Internet Control Message Protocol", "ICMP is an error-reporting protocol network devices like routers use to generate error messages to the source IP address when network problems prevent delivery of IP packets", true);
+                showFlashcardDialog(Flashcards.this, "Internet Control Message Protocol", "ICMP is an error-reporting protocol network devices like routers use to generate error messages to the source IP address when network problems prevent delivery of IP packets.", true);
             }
         });
         macCard.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +101,8 @@ public class Flashcards extends AppCompatActivity {
     }
 
     public void showFlashcardDialog(Context context, String title, String message, Boolean status) {
-        AlertDialog flashcardDialog = new AlertDialog.Builder(context).create();
+        AlertDialog.Builder flashcardDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
+
 
         //Setting Dialog Title
         flashcardDialog.setTitle(title);

@@ -9,7 +9,7 @@ import android.view.View;
 
 public class Flashcards extends AppCompatActivity {
 
-    CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard, ftpCard, natCard, popCard, smtpCard, ipCard, wanCard;
+    CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard, ftpCard, natCard, popCard, smtpCard, wanCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class Flashcards extends AppCompatActivity {
         natCard = (CardView) findViewById(R.id.natcard);
         popCard = (CardView) findViewById(R.id.popcard);
         smtpCard = (CardView) findViewById(R.id.smtpcard);
-        ipCard = (CardView) findViewById(R.id.ipcard);
         wanCard = (CardView) findViewById(R.id.wancard);
 
         arpCard.setOnClickListener(new View.OnClickListener() {
@@ -137,15 +136,6 @@ public class Flashcards extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 showFlashcardDialog(Flashcards.this, "Simple Mail Transfer Protocol", "SMTP is an application-layer protocol that enables the transmission and delivery of email over the internet.", true);
-            }
-        });
-        ipCard.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                showFlashcardDialog(Flashcards.this, "Internet Protocol", "IP is the prinicple set of digital message formats and rules for exchanging messages between computers across a single network or a series of interconnected networks, using the Internet Protocol Suite.", true);
             }
         });
         wanCard.setOnClickListener(new View.OnClickListener() {

@@ -9,7 +9,7 @@ import android.view.View;
 
 public class Flashcards extends AppCompatActivity {
 
-    CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard;
+    CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard, ftpCard, natCard, popCard, smtpCard, ipCard, wanCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,12 @@ public class Flashcards extends AppCompatActivity {
         dhcpCard = (CardView) findViewById(R.id.dhcpcard);
         dnsCard = (CardView) findViewById(R.id.dnscard);
         httpCard = (CardView) findViewById(R.id.httpcard);
+        ftpCard = (CardView) findViewById(R.id.ftpcard);
+        natCard = (CardView) findViewById(R.id.natcard);
+        popCard = (CardView) findViewById(R.id.popcard);
+        smtpCard = (CardView) findViewById(R.id.smtpcard);
+        ipCard = (CardView) findViewById(R.id.ipcard);
+        wanCard = (CardView) findViewById(R.id.wancard);
 
         arpCard.setOnClickListener(new View.OnClickListener() {
 
@@ -85,7 +91,7 @@ public class Flashcards extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                showFlashcardDialog(Flashcards.this, "Domain Name System", "DNS is a hierarchical and decentralised naming system for computers, services, or other resources conntected to the Internet or a private network.", true);
+                showFlashcardDialog(Flashcards.this, "Domain Name System", "DNS is a hierarchical and decentralised naming system for computers, services, or other resources connected to the Internet or a private network.", true);
             }
         });
         httpCard.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +100,61 @@ public class Flashcards extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                showFlashcardDialog(Flashcards.this, "Hypertext Transfer Protocol", "HTTP is an application-layer protocol used primarily on the World Wide Web. HTTP uses a client-server model where the web browser is the client and communicates with the webserver that hosts the website.", true);
+                showFlashcardDialog(Flashcards.this, "Hypertext Transfer Protocol", "HTTP is an application-layer protocol used primarily on the World Wide Web. HTTP uses a client-server model where the web browser is the client and communicates with the web server that hosts the website.", true);
+            }
+        });
+        ftpCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "File Transfer Protocol", "FTP is a standard Internet protocol for transmitting files between computers on the Internet over TCP/IP connections.", true);
+            }
+        });
+        natCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "Network Address Translation", "NAT is the process where a network device, usually a firewall, assigns a public address to a computer inside a private network.", true);
+            }
+        });
+        popCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "Post Office Protocol", "POP is a type of computer networking and Internet standard protocol that extracts and retrieves email from a remote mail server for access by the host machine.", true);
+            }
+        });
+        smtpCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "Simple Mail Transfer Protocol", "SMTP is an application-layer protocol that enables the transmission and delivery of email over the internet.", true);
+            }
+        });
+        ipCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "Internet Protocol", "IP is the prinicple set of digital message formats and rules for exchanging messages between computers across a single network or a series of interconnected networks, using the Internet Protocol Suite.", true);
+            }
+        });
+        wanCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "Wide Area Network", "WAN is a geographically distributed private telecommunications network that interconnects multiple local area networks.", true);
             }
         });
 

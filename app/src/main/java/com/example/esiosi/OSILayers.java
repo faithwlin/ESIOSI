@@ -3,7 +3,6 @@ package com.example.esiosi;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -41,14 +40,48 @@ public class OSILayers extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
         Intent i;
 
-        switch (v.getId()){
-            case R.id.physicalimage : i = new Intent(this, LessonPhysical.class); startActivity(i); break;
-            case R.id.datalinkimage : i = new Intent(this, LessonDatalink.class); startActivity(i); break;
-            case R.id.networkimage : i = new Intent(this, LessonNetwork.class); startActivity(i); break;
-            case R.id.transportimage : i = new Intent(this, LessonTransport.class); startActivity(i); break;
-            case R.id.sessionimage : i = new Intent(this, LessonSession.class); startActivity(i); break;
-            case R.id.presentationimage : i = new Intent(this, LessonPresentation.class); startActivity(i); break;
-            case R.id.applicationimage : i = new Intent(this, LessonApplication.class); startActivity(i); break;
+        switch (v.getId()) {
+            case R.id.physicalimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 1);
+                startActivity(i);
+                break;
+
+            case R.id.datalinkimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 2);
+                startActivity(i);
+                break;
+
+            case R.id.networkimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 3);
+                startActivity(i);
+                break;
+
+            case R.id.transportimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 4);
+                startActivity(i);
+                break;
+
+            case R.id.sessionimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 5);
+                startActivity(i);
+                break;
+
+            case R.id.presentationimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 6);
+                startActivity(i);
+                break;
+
+            case R.id.applicationimage:
+                i = new Intent(this, LessonsActivity.class);
+                i.putExtra("topic", 7);
+                startActivity(i);
+                break;
         }
 
     }

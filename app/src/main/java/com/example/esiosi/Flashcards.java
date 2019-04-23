@@ -9,7 +9,7 @@ import android.view.View;
 
 public class Flashcards extends AppCompatActivity {
 
-    CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard, ftpCard, natCard, popCard, smtpCard, wanCard;
+    CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard, ftpCard, natCard, popCard, smtpCard, wanCard, ipCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class Flashcards extends AppCompatActivity {
         popCard = (CardView) findViewById(R.id.popcard);
         smtpCard = (CardView) findViewById(R.id.smtpcard);
         wanCard = (CardView) findViewById(R.id.wancard);
+        ipCard = (CardView) findViewById(R.id.ipcard);
 
         arpCard.setOnClickListener(new View.OnClickListener() {
 
@@ -145,6 +146,15 @@ public class Flashcards extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 showFlashcardDialog(Flashcards.this, "Wide Area Network", "WAN is a geographically distributed private telecommunications network that interconnects multiple local area networks.", true);
+            }
+        });
+        ipCard.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                showFlashcardDialog(Flashcards.this, "Internet Protocol Address", "The IP is the method or protocol by which data is sent from one computer to another on the Internet. Each computer has at least one IP address that uniquely identifies it from all other computers.", true);
             }
         });
 

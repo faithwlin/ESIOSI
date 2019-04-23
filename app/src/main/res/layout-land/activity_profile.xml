@@ -47,6 +47,8 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="You are currently signed in as faithlin@email.com"
+        android:textColor="#000000"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/signout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"

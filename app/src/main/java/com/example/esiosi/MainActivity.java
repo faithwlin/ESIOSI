@@ -1,9 +1,11 @@
 package com.example.esiosi;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toolbar;
@@ -11,14 +13,18 @@ import android.widget.Toolbar;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Navigation implements View.OnClickListener {
 
     private CardView osiLayersCard, flashcardsCard, quizCard, myprogressCard, myprofileCard;
     private TextView name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        LayoutInflater inflater = (LayoutInflater)
+                this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_main, null, false);
+        drawer.addView(contentView, 0);
+        navigationView.setCheckedItem(R.id.dashboardnav);
 
         // Define the cards
         osiLayersCard = (CardView) findViewById(R.id.osilayerscard);

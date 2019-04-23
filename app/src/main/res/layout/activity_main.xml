@@ -59,14 +59,12 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/osilayerscard"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
                 app:cardUseCompatPadding="true">
@@ -80,6 +78,8 @@
                     <ImageView
                         android:layout_width="125dp"
                         android:layout_height="125dp"
+                        android:background="@android:color/transparent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:src="@drawable/osilayers" />
 
                     <TextView
@@ -97,14 +97,12 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/flashcardscard"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
                 app:cardUseCompatPadding="true">
@@ -118,6 +116,8 @@
                     <ImageView
                         android:layout_width="125dp"
                         android:layout_height="125dp"
+                        android:background="@android:color/transparent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:src="@drawable/flashcards" />
 
                     <TextView
@@ -135,14 +135,12 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/quizcard"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
                 app:cardUseCompatPadding="true">
@@ -156,6 +154,8 @@
                     <ImageView
                         android:layout_width="125dp"
                         android:layout_height="125dp"
+                        android:background="@android:color/transparent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:src="@drawable/quiz" />
 
                     <TextView
@@ -173,14 +173,12 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/myprogresscard"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
                 app:cardUseCompatPadding="true">
@@ -194,6 +192,8 @@
                     <ImageView
                         android:layout_width="125dp"
                         android:layout_height="125dp"
+                        android:background="@android:color/transparent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:src="@drawable/myprogress" />
 
                     <TextView
@@ -211,14 +211,12 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/myprofilecard"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
                 app:cardUseCompatPadding="true">
@@ -232,6 +230,8 @@
                     <ImageView
                         android:layout_width="125dp"
                         android:layout_height="125dp"
+                        android:background="@android:color/transparent"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:src="@drawable/myprofile" />
 
                     <TextView

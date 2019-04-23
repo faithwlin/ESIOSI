@@ -41,11 +41,11 @@ public class Profile extends AppCompatActivity {
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         String profileName = acct.getDisplayName();
         String profileEmail = acct.getEmail();
-//        Uri profilePhoto = acct.getPhotoUrl();
+        Uri profilePhoto = acct.getPhotoUrl();
 
         Name.setText(profileName);
         Email.setText("You are currently signed in as: " + profileEmail);
-//        Glide.with(this).load(new File(profilePhoto.getPath())).into(ProfilePic);
+        Glide.with(this).load(profilePhoto).into(ProfilePic);
 
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override

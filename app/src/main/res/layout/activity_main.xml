@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:layout_marginRight="0dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="0dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -26,23 +26,23 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="35dp"
                 android:layout_marginTop="6dp"
                 android:text="Welcome to ESIOSI,"
                 android:textColor="#4E4E4E"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="50dp"
                 android:text="Faith"
                 android:textColor="#4E4E4E"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </RelativeLayout>
 
@@ -52,7 +52,8 @@
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
-            android:rowCount="3">
+            android:rowCount="3"
+            android:layout_marginTop="20dp">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/osilayerscard"
@@ -63,26 +64,26 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
                         android:src="@drawable/osilayers" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="10dp"
                         android:text="OSI Layers"
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -101,26 +102,26 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
                         android:src="@drawable/flashcards" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="10dp"
                         android:text="Flashcards"
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -139,26 +140,26 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
                         android:src="@drawable/quiz" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="10dp"
                         android:text="Quiz"
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -177,26 +178,26 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
                         android:src="@drawable/myprogress" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="10dp"
                         android:text="My Progress"
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -216,24 +217,25 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
                 app:cardBackgroundColor="@android:color/transparent"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
                         android:src="@drawable/myprofile" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="10dp"
                         android:text="My Profile"
                         android:textColor="#000000"
                         android:textSize="18dp" />

@@ -100,6 +100,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             String name = account.getDisplayName();
             String email = account.getEmail();
 
+
             Name.setText(name);
             Email.setText(email);
             updateUI(true);

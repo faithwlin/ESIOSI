@@ -79,6 +79,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     {
 
         startActivity(new Intent (LoginActivity.this, MainActivity.class));
+
     }
     private void signIn()
     {
@@ -104,6 +105,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Name.setText(name);
             Email.setText(email);
             updateUI(true);
+
 
         }
         else

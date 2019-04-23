@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CardView osiLayersCard, flashcardsCard, quizCard, myprogressCard, myprofileCard;
@@ -31,11 +34,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myprogressCard.setOnClickListener(this);
         myprofileCard.setOnClickListener(this);
 
+        //Get profile name from google account
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+        String displayName = acct.getDisplayName();
+
         //define and set name in TextView
         name = findViewById(R.id.name);
-//        Intent i = getIntent();
-//        String i_name = i.getStringExtra("p_name");
-//        name.setText(i_name);
+        name.setText(displayName);
     }
 
     @Override

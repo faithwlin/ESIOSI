@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.osilayerscard : i = new Intent(this,OSILayers.class); startActivity(i); break;
             case R.id.flashcardscard : i = new Intent(this,Flashcards.class); startActivity(i); break;
-            case R.id.quizcard : i = new Intent(this,Quiz.class); startActivity(i); break;
+            case R.id.quizcard : i = new Intent(this,QuizHome.class); startActivity(i); break;
             case R.id.myprogresscard : i = new Intent(this,Progress.class); startActivity(i); break;
             case R.id.myprofilecard : i = new Intent(this,Profile.class); startActivity(i); break;
             default:break;

@@ -5,16 +5,21 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.view.LayoutInflater;
 import android.view.View;
 
-public class Flashcards extends AppCompatActivity {
+public class Flashcards extends Navigation {
 
     CardView arpCard, icmpCard, macCard, tcpCard, udpCard, dhcpCard, dnsCard, httpCard, ftpCard, natCard, popCard, smtpCard, wanCard, ipCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flashcards);
+        LayoutInflater inflater = (LayoutInflater)
+                this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_flashcards, null, false);
+        drawer.addView(contentView, 0);
+        navigationView.setCheckedItem(R.id.flashcardsnav);
 
         arpCard = (CardView) findViewById(R.id.arpcard);
         icmpCard = (CardView) findViewById(R.id.icmpcard);

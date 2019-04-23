@@ -1,10 +1,12 @@
 package com.example.esiosi;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,7 +24,7 @@ import com.google.android.gms.common.api.Status;
 
 import java.io.File;
 
-public class Profile extends AppCompatActivity {
+public class Profile extends Navigation {
     private ImageView ProfilePic;
     private TextView Name;
     private TextView Email;
@@ -32,7 +34,12 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        LayoutInflater inflater = (LayoutInflater)
+                this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_profile, null, false);
+        drawer.addView(contentView, 0);
+        navigationView.setCheckedItem(R.id.profilenav);
+
         ProfilePic = findViewById(R.id.profilepic);
         Name = findViewById(R.id.name);
         Email = findViewById(R.id.email);

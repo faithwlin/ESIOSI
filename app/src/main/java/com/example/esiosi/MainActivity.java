@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myprogressCard.setOnClickListener(this);
         myprofileCard.setOnClickListener(this);
 
-//        //define and set name in TextView
-//        name = findViewById(R.id.name);
+        //define and set name in TextView
+        name = findViewById(R.id.name);
 //        Intent i = getIntent();
 //        String i_name = i.getStringExtra("p_name");
 //        name.setText(i_name);

@@ -28,7 +28,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="0dp"
                 android:text="Welcome to ESIOSI,"
                 android:textColor="#4E4E4E"
                 android:textSize="24sp"
@@ -75,8 +75,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:src="@drawable/osilayers" />
 
                     <TextView
@@ -113,8 +113,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:src="@drawable/flashcards" />
 
                     <TextView
@@ -151,8 +151,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:src="@drawable/quiz" />
 
                     <TextView
@@ -189,8 +189,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:src="@drawable/myprogress" />
 
                     <TextView
@@ -226,8 +226,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:src="@drawable/myprofile" />
 
                     <TextView

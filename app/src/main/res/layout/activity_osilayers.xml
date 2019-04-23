@@ -98,6 +98,7 @@
 
         <ImageView
             android:id="@+id/physicalimage"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -110,6 +111,7 @@
 
         <ImageView
             android:id="@+id/datalinkimage"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -122,6 +124,7 @@
 
         <ImageView
             android:id="@+id/networkimage"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -134,6 +137,7 @@
 
         <ImageView
             android:id="@+id/transportimage"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -146,6 +150,7 @@
 
         <ImageView
             android:id="@+id/sessionimage"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -158,6 +163,7 @@
 
         <ImageView
             android:id="@+id/presentationimage"
+            android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -170,12 +176,13 @@
 
         <ImageView
             android:id="@+id/applicationimage"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:layout_marginStart="45dp"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="44dp"
-            android:clickable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/presentationimage"
             app:srcCompat="@drawable/seven" />

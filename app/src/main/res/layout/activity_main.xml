@@ -67,7 +67,8 @@
                 android:layout_margin="12dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
-                app:cardUseCompatPadding="true">
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -78,7 +79,6 @@
                     <ImageView
                         android:layout_width="125dp"
                         android:layout_height="125dp"
-                        android:background="@android:color/transparent"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:src="@drawable/osilayers" />
 
@@ -105,7 +105,8 @@
                 android:layout_margin="12dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
-                app:cardUseCompatPadding="true">
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -143,7 +144,8 @@
                 android:layout_margin="12dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
-                app:cardUseCompatPadding="true">
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -181,7 +183,8 @@
                 android:layout_margin="12dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
-                app:cardUseCompatPadding="true">
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -219,7 +222,8 @@
                 android:layout_margin="12dp"
                 app:cardElevation="0dp"
                 app:cardMaxElevation="0dp"
-                app:cardUseCompatPadding="true">
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="match_parent"

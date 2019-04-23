@@ -24,11 +24,11 @@
         <item
             android:id="@+id/progressnav"
             android:icon="@drawable/progressicon"
-            android:title="Quiz" />
+            android:title="My Progress" />
         <item
             android:id="@+id/profilenav"
             android:icon="@drawable/profileicon"
-            android:title="Quiz" />
+            android:title="My Profile" />
     </group>
 
 </menu>

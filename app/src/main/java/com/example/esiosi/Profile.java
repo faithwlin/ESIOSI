@@ -43,9 +43,12 @@ public class Profile extends AppCompatActivity {
         String profileEmail = acct.getEmail();
         Uri profilePhoto = acct.getPhotoUrl();
 
+
         Name.setText(profileName);
         Email.setText("You are currently signed in as: " + profileEmail);
-        Glide.with(this).load(profilePhoto).into(ProfilePic);
+        if (profilePhoto != null) {
+            Glide.with(this).load(profilePhoto).into(ProfilePic);
+        }
 
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override

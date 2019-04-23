@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Get profile name from google account
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
-        String displayName = acct.getDisplayName();
+        String displayName = acct.getGivenName();
 
         //define and set name in TextView
         name = findViewById(R.id.name);

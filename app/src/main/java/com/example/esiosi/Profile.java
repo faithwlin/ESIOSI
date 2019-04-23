@@ -1,6 +1,7 @@
 package com.example.esiosi;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
@@ -31,6 +35,15 @@ public class Profile extends AppCompatActivity {
         Name = findViewById(R.id.name);
         Email = findViewById(R.id.email);
         SignOut = findViewById(R.id.signout);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+        String profileName = acct.getDisplayName();
+        String profileEmail = acct.getEmail();
+//        String profilePhoto = acct.getPhotoUrl().toString();
+
+        Name.setText(profileName);
+        Email.setText("You are currently signed in as: " + profileEmail);
+//        Glide.with(this).load(profilePhoto).into(ProfilePic);
 
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override

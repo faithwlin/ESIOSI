@@ -1,8 +1,10 @@
 package com.example.esiosi;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -40,44 +42,45 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
         Bundle bundle = getIntent().getExtras();
         int i = bundle.getInt("topic");
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LessonsActivity.this.onBackPressed();
+            }
+        });
         if (i == 1) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Physical Layer");
             textView.setText("Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test ");
 
         } else if (i == 2) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Data Link Layer");
             textView.setText("Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer Data Link Layer ");
 
         } else if (i == 3) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Network Layer");
             textView.setText("Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer Network Layer ");
 
         } else if (i == 4) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Transport Layer");
             textView.setText("Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer Transport Layer ");
         } else if (i == 5) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Session Layer");
             textView.setText("Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer Session Layer ");
 
         } else if (i == 6) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Presentation Layer");
             textView.setText("Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer Presentation Layer ");
 
         } else if (i == 7) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
             toolbar.setTitle("Application Layer");
             textView.setText("Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer Application Layer ");
 

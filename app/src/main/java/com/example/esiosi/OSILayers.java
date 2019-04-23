@@ -33,6 +33,8 @@ public class OSILayers extends AppCompatActivity implements View.OnClickListener
         presentationImage.setOnClickListener(this);
         applicationImage.setOnClickListener(this);
 
+
+
     }
 
     @Override

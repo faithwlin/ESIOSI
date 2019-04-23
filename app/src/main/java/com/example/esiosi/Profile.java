@@ -20,6 +20,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
+import java.io.File;
+
 public class Profile extends AppCompatActivity {
     private ImageView ProfilePic;
     private TextView Name;
@@ -39,11 +41,11 @@ public class Profile extends AppCompatActivity {
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         String profileName = acct.getDisplayName();
         String profileEmail = acct.getEmail();
-//        String profilePhoto = acct.getPhotoUrl().toString();
+//        Uri profilePhoto = acct.getPhotoUrl();
 
         Name.setText(profileName);
         Email.setText("You are currently signed in as: " + profileEmail);
-//        Glide.with(this).load(profilePhoto).into(ProfilePic);
+//        Glide.with(this).load(new File(profilePhoto.getPath())).into(ProfilePic);
 
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override

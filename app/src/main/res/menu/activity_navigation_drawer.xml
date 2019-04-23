@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboardnav"
+            android:icon="@drawable/dashboardicon"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/layersnav"
+            android:icon="@drawable/layersicon"
+            android:title="OSI Layers" />
+        <item
+            android:id="@+id/flashcardsnav"
+            android:icon="@drawable/flashcardsicon"
+            android:title="Flashcards" />
+        <item
+            android:id="@+id/quiznav"
+            android:icon="@drawable/quizicon"
+            android:title="Quiz" />
+        <item
+            android:id="@+id/progressnav"
+            android:icon="@drawable/progressicon"
+            android:title="Quiz" />
+        <item
+            android:id="@+id/profilenav"
+            android:icon="@drawable/profileicon"
+            android:title="Quiz" />
+    </group>
+
+</menu>

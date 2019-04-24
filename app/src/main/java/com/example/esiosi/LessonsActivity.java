@@ -24,6 +24,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
     static final String YOUTUBE_VIDEO_ID7 = "kAty4mKczEg";
 
     Toolbar toolbar;
+    TextView title;
     TextView textView;
 
     YouTubePlayerView youTubePlayerView;

@@ -19,7 +19,6 @@
             app:popupTheme="@style/PopupOverlay"
             app:theme="@style/toolbarnavigation">
 
-
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>

@@ -9,9 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class OSILayers extends Navigation implements View.OnClickListener {
-
     private ImageView physicalImage, datalinkImage, networkImage, transportImage, sessionImage, presentationImage, applicationImage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +37,13 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         presentationImage.setOnClickListener(this);
         applicationImage.setOnClickListener(this);
 
-
+        //disable buttons
+        datalinkImage.setEnabled(false);
+        networkImage.setEnabled(false);
+        transportImage.setEnabled(false);
+        sessionImage.setEnabled(false);
+        presentationImage.setEnabled(false);
+        applicationImage.setEnabled(false);
 
     }
 
@@ -50,36 +54,48 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.physicalimage:
+                datalinkImage.setEnabled(true);
+                datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 1);
                 startActivity(i);
                 break;
 
             case R.id.datalinkimage:
+                networkImage.setEnabled(true);
+                networkImage.setImageResource(R.drawable.networkcolour2x);
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 2);
                 startActivity(i);
                 break;
 
             case R.id.networkimage:
+                transportImage.setEnabled(true);
+                transportImage.setImageResource(R.drawable.transportcolour2x);
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 3);
                 startActivity(i);
                 break;
 
             case R.id.transportimage:
+                sessionImage.setEnabled(true);
+                sessionImage.setImageResource(R.drawable.sessioncolour2x);
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 4);
                 startActivity(i);
                 break;
 
             case R.id.sessionimage:
+                presentationImage.setEnabled(true);
+                presentationImage.setImageResource(R.drawable.presentationcolour2x);
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 5);
                 startActivity(i);
                 break;
 
             case R.id.presentationimage:
+                applicationImage.setEnabled(true);
+                applicationImage.setImageResource(R.drawable.applicationcolour2x);
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 6);
                 startActivity(i);
@@ -93,5 +109,10 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         }
 
     }
-}
 
+
+    @Override
+    public void onSaveInstanceState (Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+    }
+}

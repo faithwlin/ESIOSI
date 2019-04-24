@@ -136,13 +136,15 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void updateQuestion() {
-        Question.setText(quizQuestions.getQuestion(questionNumber));
-        Answer1.setText(quizQuestions.getChoice1(questionNumber));
-        Answer2.setText(quizQuestions.getChoice2(questionNumber));
-        Answer3.setText(quizQuestions.getChoice3(questionNumber));
-        Answer4.setText(quizQuestions.getChoice4(questionNumber));
-//        QuestionNo.setText(quizQuestions.getQuestionNo(questionNumber));
 
+        if (attempts < 10) {
+            Question.setText(quizQuestions.getQuestion(questionNumber));
+            Answer1.setText(quizQuestions.getChoice1(questionNumber));
+            Answer2.setText(quizQuestions.getChoice2(questionNumber));
+            Answer3.setText(quizQuestions.getChoice3(questionNumber));
+            Answer4.setText(quizQuestions.getChoice4(questionNumber));
+            QuestionNo.setText(quizQuestions.getQuestionNo(questionNumber));
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,6 +156,7 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         correctAnswer = quizQuestions.getCorrectAnswer(questionNumber);
+
         if ( attempts == 10) {
             finish();
             int score = mScore;

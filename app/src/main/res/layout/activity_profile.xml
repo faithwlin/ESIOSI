@@ -49,7 +49,7 @@
             android:visibility="visible" />
 
         <View
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="110dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/lightGrey"/>
@@ -83,7 +83,7 @@
             android:layout_width="288dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:background="#FFFFFF"
             android:maxWidth="100dp"
             android:maxHeight="100dp"

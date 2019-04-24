@@ -17,6 +17,9 @@
 
     <style name="toolbarnavigation" parent="AppTheme">
         <item name="android:textColorSecondary">#000000</item>
+        <item name="android:listDivider">@color/lightGrey</item>
+        <item name="android:textColorPrimary">@color/black</item>
+
     </style>
 
     <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
@@ -24,8 +27,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>

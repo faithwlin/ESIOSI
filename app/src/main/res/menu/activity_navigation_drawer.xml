@@ -4,31 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/item1">
         <item
             android:id="@+id/dashboardnav"
             android:icon="@drawable/dashboardicon"
             android:title="Dashboard" />
-        <item
-            android:id="@+id/layersnav"
-            android:icon="@drawable/layersicon"
-            android:title="OSI Layers" />
-        <item
-            android:id="@+id/flashcardsnav"
-            android:icon="@drawable/flashcardsicon"
-            android:title="Flashcards" />
-        <item
-            android:id="@+id/quiznav"
-            android:icon="@drawable/quizicon"
-            android:title="Quiz" />
-        <item
-            android:id="@+id/progressnav"
-            android:icon="@drawable/progressicon"
-            android:title="My Progress" />
-        <item
-            android:id="@+id/profilenav"
-            android:icon="@drawable/profileicon"
-            android:title="My Profile" />
+    </group>
+
+    <group android:id="@+id/item2">
+         <item
+             android:id="@+id/layersnav"
+             android:icon="@drawable/layersicon"
+             android:title="OSI Layers" />
+    </group>
+
+    <group android:id="@+id/item3">
+         <item
+             android:id="@+id/flashcardsnav"
+             android:icon="@drawable/flashcardsicon"
+             android:title="Flashcards" />
+    </group>
+
+    <group android:id="@+id/item4">
+         <item
+             android:id="@+id/quiznav"
+             android:icon="@drawable/quizicon"
+             android:title="Quiz" />
+    </group>
+
+    <group android:id="@+id/item5">
+         <item
+             android:id="@+id/progressnav"
+             android:icon="@drawable/progressicon"
+             android:title="My Progress" />
+    </group>
+
+    <group android:id="@+id/item6">
+         <item
+             android:id="@+id/profilenav"
+             android:icon="@drawable/profileicon"
+             android:title="My Profile"  />
     </group>
 
 </menu>

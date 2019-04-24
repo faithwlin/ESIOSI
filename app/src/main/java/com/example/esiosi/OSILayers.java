@@ -2,6 +2,8 @@ package com.example.esiosi;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -28,6 +30,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         presentationImage = (ImageView) findViewById(R.id.presentationimage);
         applicationImage = (ImageView) findViewById(R.id.applicationimage);
 
+
         //Add click listener to image views
         physicalImage.setOnClickListener(this);
         datalinkImage.setOnClickListener(this);
@@ -49,6 +52,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
     @Override
     //On click method will be called when a cardview is clicked
+        //Enables next lesson when previous lesson is clicked
     public void onClick(View v) {
         Intent i;
 
@@ -110,9 +114,4 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
     }
 
-
-    @Override
-    public void onSaveInstanceState (Bundle savedInstanceState){
-        super.onSaveInstanceState(savedInstanceState);
-    }
 }

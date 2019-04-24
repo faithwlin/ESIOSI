@@ -10,8 +10,6 @@ import android.widget.ImageView;
 
 public class QuizHome extends Navigation {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

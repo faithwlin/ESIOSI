@@ -16,14 +16,14 @@ public class QuizQuestions {
     };
     private String mQuestions[] = {
             // Easy? Should we do 2 types of difficulties
-            "The physical layer is concerned with",
-            "The physical layer provides",
+            "The physical layer is concerned with what delivery?",
+            "The physical layer provides ______.",
             "Which of the following is not a function of the network layer?",
-            "ICMP is primarily used for",
-            "The transport layer aggregates data from different applications into a single stream before passing it to",
+            "ICMP is primarily used for ______.",
+            "The transport layer aggregates data from different applications into a single stream before passing it to ______.",
             "Which of the following is a transport layer protocol used in internet?",
-            "User datagram protocol is connectionless because",
-            "Transmission control protocol",
+            "User datagram protocol is connectionless because ______.",
+            "Transmission control protocol ______.",
             "To deliver a message to the application program running on a host, a ______ address is consulted",
             "Electronic mail uses this application layer protocol",
             // Hard?
@@ -38,12 +38,11 @@ public class QuizQuestions {
             "Q9/10: Question 9 Question 9 Question 9 Question 9 Question 9 Question 9",
             "10/10: Question 10 Question 10 Question 10 Question 10 Question 10 Question 10",
 
-
     };
 
     private String mHints[] = {
-            "Hint 1",
-            "Hint 2",
+            "Read through Physical Layers lesson again.",
+            "This answer is obvious.",
             "Hint 3",
             "Hint 4",
             "Hint 5",

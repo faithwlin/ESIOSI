@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,10 +22,10 @@ public class QuizActivity extends AppCompatActivity {
     private int questionNumber = 0;
     private TextView QuestionNo;
     private TextView Question;
-    private TextView Answer1;
-    private TextView Answer2;
-    private TextView Answer3;
-    private TextView Answer4;
+    private Button Answer1;
+    private Button Answer2;
+    private Button Answer3;
+    private Button Answer4;
     private String correctAnswer;
     private int attempts = 0;
     public int mScore = 0;
@@ -132,7 +133,6 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void updateQuestion() {
@@ -150,7 +150,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                String s = quizQuestions.getHint(questionNumber - 1);
-                showFlashcardDialog(QuizActivity.this, "Hint", quizQuestions.getHint(questionNumber - 1), true);
+                showFlashcardDialog(QuizActivity.this, quizQuestions.getHint(questionNumber - 1), true);
 
             }
         });
@@ -172,12 +172,9 @@ public class QuizActivity extends AppCompatActivity {
 
     private void updateScore(int point) {
     }
-    public void showFlashcardDialog(Context context, String title, String message, Boolean status) {
+    public void showFlashcardDialog(Context context, String message, Boolean status) {
         AlertDialog.Builder flashcardDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
 
-
-        //Setting Dialog Title
-        flashcardDialog.setTitle(title);
 
         flashcardDialog.setCancelable(true);
 

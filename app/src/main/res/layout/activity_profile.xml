@@ -1,82 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:gravity="center"
     tools:context=".Profile">
 
-    <ImageView
-        android:id="@+id/profilepic"
-        android:layout_width="106dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/userdefault" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="230dp"
-        android:layout_height="47dp"
-        android:gravity="center"
-        android:text="Faith Lin"
-        android:textColor="#2094F3"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.305" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="376dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="hello"
-        android:textColor="#000000"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/signout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/profilepic"
+            android:layout_width="106dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:foreground="@drawable/round_imageview"
+            app:srcCompat="@drawable/userdefault" />
 
-    <ImageButton
-        android:id="@+id/signout"
-        android:layout_width="258dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="#ffffff"
-        android:maxWidth="100dp"
-        android:maxHeight="100dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.985"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintVertical_bias="0.694"
-        app:srcCompat="@drawable/singout2x" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Firstname Lastname"
+            android:textColor="@color/primaryBlue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="email"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+
+        <View
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Developed by Amanda, Dennis and Faith"
+            android:textColor="@color/grey"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="https://github.com/faithwlin/ESIOSI"
+            android:textColor="@color/grey"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+
+        <ImageButton
+            android:id="@+id/signout"
+            android:layout_width="288dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:background="#FFFFFF"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/singout2x" />
+
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

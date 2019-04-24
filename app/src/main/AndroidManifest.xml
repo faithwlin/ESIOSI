@@ -18,14 +18,20 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="Home"
+            android:label="Dashboard"
             android:screenOrientation="portrait" />
-        <activity android:name=".Progress" />
-        <activity android:name=".Profile" />
-        <activity android:name=".QuizHome" />
-        <activity android:name=".Flashcards" />
-        <activity android:name=".OSILayers" />
-        <activity android:name=".LessonsActivity" />
+        <activity android:name=".Progress"
+            android:label="My Progress"/>
+        <activity android:name=".Profile"
+            android:label="My Profile"/>
+        <activity android:name=".QuizHome"
+            android:label="Quiz"/>
+        <activity android:name=".Flashcards"
+            android:label="Acronym Flashcards"/>
+        <activity android:name=".OSILayers"
+            android:label="OSI Layers"/>
+        <activity android:name=".LessonsActivity"
+            android:label="OSI Layers"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +39,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuizActivity" />
+        <activity android:name=".QuizActivity"
+            android:label="Quiz"/>
         <activity android:name=".QuizComplete"></activity>
     </application>
 

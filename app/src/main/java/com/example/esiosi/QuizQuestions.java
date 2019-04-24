@@ -16,16 +16,16 @@ public class QuizQuestions {
     };
     private String mQuestions[] = {
             // Easy? Should we do 2 types of difficulties
-            "Q1/10, The physical layer is concerned with",
-            "Q2/10, The physical layer provides",
-            "Q3/10, Which of the following is not a function of the network layer?",
-            "Q4/10, ICMP is primarily used for",
-            "Q5/10, The transport layer aggregates data from different applications into a single stream before passing it to",
-            "Q6/10, Which of the following is a transport layer protocol used in internet?",
-            "Q7/10, User datagram protocol is connectionless because",
-            "Q8/10, Transmission control protocol",
-            "Q9/10, To deliver a message to the application program running on a host, a ______ address is consulted",
-            "10/10, Electronic mail uses this application layer protocol",
+            "The physical layer is concerned with",
+            "The physical layer provides",
+            "Which of the following is not a function of the network layer?",
+            "ICMP is primarily used for",
+            "The transport layer aggregates data from different applications into a single stream before passing it to",
+            "Which of the following is a transport layer protocol used in internet?",
+            "User datagram protocol is connectionless because",
+            "Transmission control protocol",
+            "To deliver a message to the application program running on a host, a ______ address is consulted",
+            "Electronic mail uses this application layer protocol",
             // Hard?
             "Q1/10: Question 1 Question 1 Question 1 Question 1 Question 1 Question 1",
             "Q2/10: Question 2 Question 2 Question 2 Question 2 Question 2 Question 2",

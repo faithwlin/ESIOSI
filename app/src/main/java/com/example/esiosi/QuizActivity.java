@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class QuizActivity extends AppCompatActivity {
     private int attempts = 0;
     public int mScore = 0;
     QuizDatabase quizDatabase;
-    private Button button;
+    private ImageButton button;
 
 
     @Override
@@ -59,7 +60,7 @@ public class QuizActivity extends AppCompatActivity {
         Answer4 = findViewById(R.id.Answer4);
         hint = (TextView)findViewById(R.id.hint);
         mScore = 0;
-        button = (Button) findViewById(R.id.button);
+        button = (ImageButton) findViewById(R.id.button);
 
 
         quizDatabase = new QuizDatabase(this);
@@ -135,6 +136,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void updateQuestion() {
+//        QuestionNo.setText(quizQuestions.getQuestionNo());
         Question.setText(quizQuestions.getQuestion(questionNumber));
         Answer1.setText(quizQuestions.getChoice1(questionNumber));
         Answer2.setText(quizQuestions.getChoice2(questionNumber));

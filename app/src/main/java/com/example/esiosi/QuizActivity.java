@@ -20,9 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class QuizActivity extends AppCompatActivity {
 
     private QuizQuestions quizQuestions = new QuizQuestions();
-    public static final String TRANSFER_SCORE = "transferScore";
     private TextView timer;
-    private int questionNumber = 0;
     private TextView QuestionNo;
     private TextView Question;
     private Button Answer1;
@@ -32,11 +30,14 @@ public class QuizActivity extends AppCompatActivity {
     private String correctAnswer;
     private int attempts = 0;
     public int mScore = 0;
-    QuizDatabase quizDatabase;
+    private int questionNumber = 0;
+//    QuizDatabase quizDatabase;
     private ImageView button;
     private int highScore;
     public static final String SHARED_PREFERENCES = "sharedPreferences";
     public static final String HIGHSCORE_KEY = "highScoreKey";
+    public static final String SCORE_KEY = "score";
+    public static final String TRANSFER_SCORE = "transferScore";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +70,7 @@ public class QuizActivity extends AppCompatActivity {
         button = (ImageView) findViewById(R.id.button);
 
 
-        quizDatabase = new QuizDatabase(this);
+//        quizDatabase = new QuizDatabase(this);
 
         updateQuestion();
 
@@ -163,13 +164,12 @@ public class QuizActivity extends AppCompatActivity {
 
         if (attempts == 10) {
             finish();
-            int score = mScore;
-            quizDatabase.addData(score);
-            Intent results = new Intent(getApplicationContext(),QuizComplete.class);
-            results.putExtra(TRANSFER_SCORE, score);
+            updateScore(mScore);
+            Intent results = new Intent(getApplicationContext(), QuizComplete.class);
+            results.putExtra(TRANSFER_SCORE, mScore);
             startActivity(results);
-        }
-        else {
+
+        } else {
             questionNumber++;
         }
 
@@ -180,6 +180,10 @@ public class QuizActivity extends AppCompatActivity {
 
 
     private void updateScore(int point) {
+        SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(SCORE_KEY, mScore);
+
     }
 
     public void showFlashcardDialog(Context context, String message, Boolean status) {
@@ -193,14 +197,14 @@ public class QuizActivity extends AppCompatActivity {
 
     private void updateHighScore(int newHighScore) {
         highScore = newHighScore;
-
-
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt(HIGHSCORE_KEY, highScore);
         editor.commit();
 
     }
+
+
 
 
 }

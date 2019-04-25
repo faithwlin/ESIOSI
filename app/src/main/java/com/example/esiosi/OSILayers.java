@@ -56,6 +56,60 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         presentationImage.setEnabled(false);
         applicationImage.setEnabled(false);
 
+        SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        int s = preferences.getInt(LESSON_KEY, 0);
+
+        if (s == 1) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+        } else if (s == 2) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+            networkImage.setEnabled(true);
+            networkImage.setImageResource(R.drawable.networkcolour2x);
+        } else if (s == 3) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+            networkImage.setEnabled(true);
+            networkImage.setImageResource(R.drawable.networkcolour2x);
+            transportImage.setEnabled(true);
+            transportImage.setImageResource(R.drawable.transportcolour2x);
+        } else if (s == 4) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+            networkImage.setEnabled(true);
+            networkImage.setImageResource(R.drawable.networkcolour2x);
+            transportImage.setEnabled(true);
+            transportImage.setImageResource(R.drawable.transportcolour2x);
+            sessionImage.setEnabled(true);
+            sessionImage.setImageResource(R.drawable.sessioncolour2x);
+        } else if (s == 5) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+            networkImage.setEnabled(true);
+            networkImage.setImageResource(R.drawable.networkcolour2x);
+            transportImage.setEnabled(true);
+            transportImage.setImageResource(R.drawable.transportcolour2x);
+            sessionImage.setEnabled(true);
+            sessionImage.setImageResource(R.drawable.sessioncolour2x);
+            presentationImage.setEnabled(true);
+            presentationImage.setImageResource(R.drawable.presentationcolour2x);
+        } else if (s == 6) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+            networkImage.setEnabled(true);
+            networkImage.setImageResource(R.drawable.networkcolour2x);
+            transportImage.setEnabled(true);
+            transportImage.setImageResource(R.drawable.transportcolour2x);
+            sessionImage.setEnabled(true);
+            sessionImage.setImageResource(R.drawable.sessioncolour2x);
+            presentationImage.setEnabled(true);
+            presentationImage.setImageResource(R.drawable.presentationcolour2x);
+            applicationImage.setEnabled(true);
+            applicationImage.setImageResource(R.drawable.applicationcolour2x);
+        }
+
+
     }
 
     @Override

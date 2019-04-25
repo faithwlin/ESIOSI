@@ -80,6 +80,8 @@
 
         <ImageButton
             android:id="@+id/signout"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="288dp"
             android:layout_height="49dp"
             android:layout_gravity="center"

@@ -59,6 +59,8 @@
 
         <ImageView
             android:id="@+id/finishButton"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="166dp"
             android:layout_height="56dp"
             android:layout_gravity="center"

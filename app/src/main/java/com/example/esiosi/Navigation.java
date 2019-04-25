@@ -64,7 +64,6 @@ public class Navigation extends AppCompatActivity
             return true;
 
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -110,5 +109,7 @@ public class Navigation extends AppCompatActivity
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
+
 }

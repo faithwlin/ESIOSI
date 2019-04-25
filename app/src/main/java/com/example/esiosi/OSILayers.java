@@ -12,6 +12,11 @@ import android.widget.ImageView;
 
 public class OSILayers extends Navigation implements View.OnClickListener {
     private ImageView physicalImage, datalinkImage, networkImage, transportImage, sessionImage, presentationImage, applicationImage;
+
+    public static final String SHARED_PREFERENCES = "sharedPreferences";
+    public static final String LESSON_KEY = "lessonKey";
+    private int lesson;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +71,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 1);
                 startActivity(i);
+                updateLesson(1);
                 break;
 
             case R.id.datalinkimage:
@@ -74,6 +80,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 2);
                 startActivity(i);
+                updateLesson(2);
                 break;
 
             case R.id.networkimage:
@@ -82,6 +89,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 3);
                 startActivity(i);
+                updateLesson(3);
                 break;
 
             case R.id.transportimage:
@@ -90,6 +98,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 4);
                 startActivity(i);
+                updateLesson(4);
                 break;
 
             case R.id.sessionimage:
@@ -98,6 +107,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 5);
                 startActivity(i);
+                updateLesson(5);
                 break;
 
             case R.id.presentationimage:
@@ -106,15 +116,25 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 6);
                 startActivity(i);
+                updateLesson(6);
                 break;
 
             case R.id.applicationimage:
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 7);
                 startActivity(i);
+                updateLesson(7);
                 break;
         }
 
+    }
+
+    private void updateLesson(int lessonNEW) {
+        lesson = lessonNEW;
+        SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(LESSON_KEY, lesson);
+        editor.commit();
     }
 
 }

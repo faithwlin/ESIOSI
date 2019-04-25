@@ -12,6 +12,7 @@ public class QuizComplete extends AppCompatActivity {
     private TextView score;
     private ImageView finish;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +21,11 @@ public class QuizComplete extends AppCompatActivity {
         score = (TextView)findViewById(R.id.score);
         Bundle bundle = getIntent().getExtras();
 
-        int mScore = bundle.getInt("Scores");
+        int mScore = bundle.getInt(QuizActivity.TRANSFER_SCORE);
         score.setText(mScore + " / 10");
+
+
+
 
         finish = (ImageView)findViewById(R.id.finishButton);
         finish.setOnClickListener(new View.OnClickListener() {

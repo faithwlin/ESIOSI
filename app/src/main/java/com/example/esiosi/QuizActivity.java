@@ -1,7 +1,9 @@
 package com.example.esiosi;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class QuizActivity extends AppCompatActivity {
 
     private QuizQuestions quizQuestions = new QuizQuestions();
+    public static final String TRANSFER_SCORE = "transferScore";
     private TextView timer;
     private int questionNumber = 0;
     private TextView QuestionNo;
@@ -31,7 +34,9 @@ public class QuizActivity extends AppCompatActivity {
     public int mScore = 0;
     QuizDatabase quizDatabase;
     private ImageView button;
-
+    private int highScore;
+    public static final String SHARED_PREFERENCES = "sharedPreferences";
+    public static final String HIGHSCORE_KEY = "highScoreKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +70,6 @@ public class QuizActivity extends AppCompatActivity {
 
 
         quizDatabase = new QuizDatabase(this);
-
 
         updateQuestion();
 
@@ -157,30 +161,46 @@ public class QuizActivity extends AppCompatActivity {
 
         correctAnswer = quizQuestions.getCorrectAnswer(questionNumber);
 
-        if ( attempts == 10) {
+        if (attempts == 10) {
             finish();
             int score = mScore;
             quizDatabase.addData(score);
             Intent results = new Intent(getApplicationContext(),QuizComplete.class);
-            results.putExtra("Scores", score);
+            results.putExtra(TRANSFER_SCORE, score);
             startActivity(results);
         }
         else {
             questionNumber++;
         }
+
+        if (mScore > highScore) {
+            updateHighScore(mScore);
+        }
     }
+
 
     private void updateScore(int point) {
     }
+
     public void showFlashcardDialog(Context context, String message, Boolean status) {
         AlertDialog.Builder flashcardDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
 
 
         flashcardDialog.setCancelable(true);
-
-        //Setting Dialog Message
         flashcardDialog.setMessage(message);
-
         flashcardDialog.show();
     }
+
+    private void updateHighScore(int newHighScore) {
+        highScore = newHighScore;
+
+
+        SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(HIGHSCORE_KEY, highScore);
+        editor.commit();
+
+    }
+
+
 }

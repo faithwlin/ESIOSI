@@ -25,7 +25,7 @@ public class QuizQuestions {
             "User datagram protocol is connectionless because ______.",
             "Transmission control protocol ______.",
             "To deliver a message to the application program running on a host, a ______ address is consulted",
-            "Electronic mail uses this application layer protocol",
+            "Electronic mail uses which application layer protocol?",
             // Hard?
             "Q1/10: Question 1 Question 1 Question 1 Question 1 Question 1 Question 1",
             "Q2/10: Question 2 Question 2 Question 2 Question 2 Question 2 Question 2",
@@ -41,16 +41,16 @@ public class QuizQuestions {
     };
 
     private String mHints[] = {
-            "Read through Physical Layers lesson again.",
-            "This answer is obvious.",
-            "Hint 3",
-            "Hint 4",
-            "Hint 5",
-            "Hint 6",
-            "Hint 7",
-            "Hint 8",
-            "Hint 9",
-            "Hint 10",
+            "The physical layer defines the means of transmitting raw bits.",
+            "The physical layer deals with most of the network's physical connections.",
+            "The network layer provides data routing paths for network communication.",
+            "One function of ICMP is sending messages indicating a requested service is not available.",
+            "Try to remember the OSI acronym.",
+            "UDP is primarily used for establishing low-latency and loss-tolerating connections between applications.",
+            "Connectionless protocols are usually described a stateless because the endpoints have no protocol-defined way to remember where they are in a 'conversation' of messages",
+            "TCP is one of the main protocols of the Internet Protocol suite",
+            "Just guess.",
+            "Re-watch application layer lesson.",
 
     };
 
@@ -66,7 +66,7 @@ public class QuizQuestions {
             {"is a connection oriented protocol", "uses a 3 way handshake to establish connection", "receives data from application", "all of the above"},
             {"IP", "port", "MAC", "none of the above"},
             {"SMTP", "HTTP", "FTP", "SIP"},
-            // Hard?
+            // Hard version?
             {"Answer 11", "Option 2", "Option 3", "Option 4"},
             {"Option 1", "Answer 12", "Option 3", "Option 4"},
             {"Option 1", "Option 2", "Answer 13", "Option 4"},

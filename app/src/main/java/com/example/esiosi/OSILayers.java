@@ -55,7 +55,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
     @Override
     //On click method will be called when a cardview is clicked
-        //Enables next lesson when previous lesson is clicked
+    //Enables next lesson when previous lesson is clicked
     public void onClick(View v) {
         Intent i;
 

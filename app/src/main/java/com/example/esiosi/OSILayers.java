@@ -59,21 +59,14 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         int s = preferences.getInt(LESSON_KEY, 0);
 
-        if (s == 1) {
+        if (s == 2) {
             datalinkImage.setEnabled(true);
             datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
-        } else if (s == 2) {
-            datalinkImage.setEnabled(true);
-            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
-            networkImage.setEnabled(true);
-            networkImage.setImageResource(R.drawable.networkcolour2x);
         } else if (s == 3) {
             datalinkImage.setEnabled(true);
             datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
             networkImage.setEnabled(true);
             networkImage.setImageResource(R.drawable.networkcolour2x);
-            transportImage.setEnabled(true);
-            transportImage.setImageResource(R.drawable.transportcolour2x);
         } else if (s == 4) {
             datalinkImage.setEnabled(true);
             datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
@@ -81,8 +74,6 @@ public class OSILayers extends Navigation implements View.OnClickListener {
             networkImage.setImageResource(R.drawable.networkcolour2x);
             transportImage.setEnabled(true);
             transportImage.setImageResource(R.drawable.transportcolour2x);
-            sessionImage.setEnabled(true);
-            sessionImage.setImageResource(R.drawable.sessioncolour2x);
         } else if (s == 5) {
             datalinkImage.setEnabled(true);
             datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
@@ -92,8 +83,6 @@ public class OSILayers extends Navigation implements View.OnClickListener {
             transportImage.setImageResource(R.drawable.transportcolour2x);
             sessionImage.setEnabled(true);
             sessionImage.setImageResource(R.drawable.sessioncolour2x);
-            presentationImage.setEnabled(true);
-            presentationImage.setImageResource(R.drawable.presentationcolour2x);
         } else if (s == 6) {
             datalinkImage.setEnabled(true);
             datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
@@ -108,7 +97,6 @@ public class OSILayers extends Navigation implements View.OnClickListener {
             applicationImage.setEnabled(true);
             applicationImage.setImageResource(R.drawable.applicationcolour2x);
         }
-
 
     }
 
@@ -125,7 +113,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 1);
                 startActivity(i);
-                updateLesson(1);
+                updateLesson(2);
                 break;
 
             case R.id.datalinkimage:
@@ -134,7 +122,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 2);
                 startActivity(i);
-                updateLesson(2);
+                updateLesson(3);
                 break;
 
             case R.id.networkimage:
@@ -143,7 +131,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 3);
                 startActivity(i);
-                updateLesson(3);
+                updateLesson(4);
                 break;
 
             case R.id.transportimage:
@@ -152,7 +140,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 4);
                 startActivity(i);
-                updateLesson(4);
+                updateLesson(5);
                 break;
 
             case R.id.sessionimage:
@@ -161,7 +149,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 5);
                 startActivity(i);
-                updateLesson(5);
+                updateLesson(6);
                 break;
 
             case R.id.presentationimage:
@@ -170,14 +158,13 @@ public class OSILayers extends Navigation implements View.OnClickListener {
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 6);
                 startActivity(i);
-                updateLesson(6);
+                updateLesson(7);
                 break;
 
             case R.id.applicationimage:
                 i = new Intent(this, LessonsActivity.class);
                 i.putExtra("topic", 7);
                 startActivity(i);
-                updateLesson(7);
                 break;
         }
 

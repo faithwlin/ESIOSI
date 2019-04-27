@@ -18,15 +18,15 @@ public class QuizComplete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_complete);
 
+        //Initialise UI element for Quiz Score
         score = (TextView)findViewById(R.id.score);
-        Bundle bundle = getIntent().getExtras();
 
+        //Getting quiz score from QuizActivity's Intent & Bundle
+        Bundle bundle = getIntent().getExtras();
         int mScore = bundle.getInt(QuizActivity.TRANSFER_SCORE);
         score.setText(mScore + " / 10");
 
-
-
-
+        //Finish button to go back to QuizHome
         finish = (ImageView)findViewById(R.id.finishButton);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override

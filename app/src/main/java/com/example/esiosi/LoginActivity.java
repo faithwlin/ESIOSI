@@ -36,25 +36,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Define objects
         setContentView(R.layout.activity_login);
         SignOut = (ImageButton)findViewById(R.id.logoutBtn);
         SignIn = (ImageButton)findViewById(R.id.loginBtn);
         Enter = (ImageButton)findViewById(R.id.enterBtn);
         Name = (TextView)findViewById(R.id.name);
         Email = (TextView)findViewById(R.id.email);
+
+        //Set listeners for buttons
         SignIn.setOnClickListener(this);
         SignOut.setOnClickListener(this);
         Enter.setOnClickListener(this);
 
+        //Hide visibility of user detail containers
         Name.setVisibility(View.GONE);
         Email.setVisibility(View.GONE);
         SignOut.setVisibility(View.GONE);
         Enter.setVisibility(View.GONE);
 
+        //Initialise Google API Client and add API
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this, this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
     }
 
+    //Identify which button is clicked
     @Override
     public void onClick(View v) {
     switch (v.getId()){
@@ -75,12 +81,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+    //Declare methods for buttons
     private void enter()
     {
 
         startActivity(new Intent (LoginActivity.this, MainActivity.class));
 
     }
+
     private void signIn()
     {
         Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
@@ -95,6 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
     }
+    //Declare method to handle sign in results and display to user
     private void handleResult(GoogleSignInResult result) {
         if (result.isSuccess()) {
             GoogleSignInAccount account = result.getSignInAccount();
@@ -113,6 +122,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             updateUI(false);
         }
     }
+
+    //Declare method to unhide/show user details
     private void updateUI(boolean isLogin)
     {
         if(isLogin)

@@ -31,6 +31,7 @@ public class QuizActivity extends AppCompatActivity {
     private int attempts = 0;
     public int mScore = 0;
     private int questionNumber = 0;
+//    QuizDatabase quizDatabase;
     private ImageView button;
     private int highScore;
     public static final String SHARED_PREFERENCES = "sharedPreferences";
@@ -46,8 +47,8 @@ public class QuizActivity extends AppCompatActivity {
         //Define timer
         timer = findViewById(R.id.timer);
 
-        //Set countdown timer for 10 minutes, format changed to Minutes and Seconds
         new CountDownTimer(600000, 1000) {
+
             public void onTick(long millisUntilFinished) {
                 timer.setText("" + String.format("0%d : %d",
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
@@ -60,7 +61,6 @@ public class QuizActivity extends AppCompatActivity {
             }
         }.start();
 
-        //Initialise variables
         QuestionNo = findViewById(R.id.QuestionNo);
         Question = findViewById(R.id.Question);
         Answer1 = findViewById(R.id.Answer1);
@@ -69,6 +69,9 @@ public class QuizActivity extends AppCompatActivity {
         Answer4 = findViewById(R.id.Answer4);
         mScore = 0;
         button = (ImageView) findViewById(R.id.button);
+
+
+//        quizDatabase = new QuizDatabase(this);
 
         updateQuestion();
 
@@ -140,11 +143,9 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    //Method that allows questions and options to be changed
     private void updateQuestion() {
 
-
-        if (attempts < 10) { //To ensure only 10 questions are shown.
+        if (attempts < 10) {
             Question.setText(quizQuestions.getQuestion(questionNumber));
             Answer1.setText(quizQuestions.getChoice1(questionNumber));
             Answer2.setText(quizQuestions.getChoice2(questionNumber));
@@ -153,24 +154,22 @@ public class QuizActivity extends AppCompatActivity {
             QuestionNo.setText(quizQuestions.getQuestionNo(questionNumber));
         }
 
-        //OnClickListener for the Hints button to show AlertDialog
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showHintDialog(QuizActivity.this, quizQuestions.getHint(questionNumber - 1), true);
+//                String s = quizQuestions.getHint(questionNumber - 1);
+                showFlashcardDialog(QuizActivity.this, quizQuestions.getHint(questionNumber - 1), true);
 
             }
         });
 
-        //Checks with QuizQuestions class to see if answer was correct
         correctAnswer = quizQuestions.getCorrectAnswer(questionNumber);
 
-        //Finishes the quiz once 10 questions have been answered
         if (attempts == 10) {
             finish();
             updateScore(mScore);
-            Intent results = new Intent(getApplicationContext(), QuizComplete.class); //Starts QuizComplete activity
-            results.putExtra(TRANSFER_SCORE, mScore); //Transfers score to show at QuizComplete activity
+            Intent results = new Intent(getApplicationContext(), QuizComplete.class);
+            results.putExtra(TRANSFER_SCORE, mScore);
             startActivity(results);
 
         } else {
@@ -183,7 +182,6 @@ public class QuizActivity extends AppCompatActivity {
     }
 
 
-    //Method to store the score as the user conducts quiz
     private void updateScore(int point) {
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
@@ -191,18 +189,17 @@ public class QuizActivity extends AppCompatActivity {
 
     }
     //Displaying the hint function with an AlertDialog
-    public void showHintDialog(Context context, String message, Boolean status) {
-        AlertDialog.Builder hintDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
+    public void showFlashcardDialog(Context context, String message, Boolean status) {
+        AlertDialog.Builder flashcardDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
 
 
-        hintDialog.setCancelable(true);
+        flashcardDialog.setCancelable(true);
         //Set AlertDialog message
-        hintDialog.setMessage(message);
+        flashcardDialog.setMessage(message);
 
-        hintDialog.show();
+        flashcardDialog.show();
     }
 
-    //Method to update and store new highScore
     private void updateHighScore(int newHighScore) {
         highScore = newHighScore;
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);

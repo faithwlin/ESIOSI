@@ -16,14 +16,17 @@ public class Flashcards extends Navigation {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Slide in and out animation for activity transition
         overridePendingTransition(R.anim.animation_enter, R.anim.animation_leave);
 
+        // Inflate the layout. Instantiate layout XML file
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contentView = inflater.inflate(R.layout.activity_flashcards, null, false);
         drawer.addView(contentView, 0);
         navigationView.setCheckedItem(R.id.flashcardsnav);
 
+        //Define the cardview for each flashcard
         arpCard = (CardView) findViewById(R.id.arpcard);
         icmpCard = (CardView) findViewById(R.id.icmpcard);
         macCard = (CardView) findViewById(R.id.maccard);
@@ -39,6 +42,8 @@ public class Flashcards extends Navigation {
         wanCard = (CardView) findViewById(R.id.wancard);
         ipCard = (CardView) findViewById(R.id.ipcard);
 
+
+        //Add a click listener to each card & defining the strings for each card when clicked
         arpCard.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -167,17 +172,17 @@ public class Flashcards extends Navigation {
         });
 
     }
-
+    //Display flashcard function with AlertDialog
     public void showFlashcardDialog(Context context, String title, String message, Boolean status) {
         AlertDialog.Builder flashcardDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
 
 
-        //Setting Dialog Title
+        //Setting AlertDialog Title
         flashcardDialog.setTitle(title);
 
         flashcardDialog.setCancelable(true);
 
-        //Setting Dialog Message
+        //Setting AlertDialog Message
         flashcardDialog.setMessage(message);
 
         flashcardDialog.show();

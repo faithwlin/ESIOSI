@@ -44,6 +44,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_start);
 
+        //Define timer
         timer = findViewById(R.id.timer);
 
         new CountDownTimer(600000, 1000) {
@@ -74,6 +75,8 @@ public class QuizActivity extends AppCompatActivity {
 
         updateQuestion();
 
+        //Set CLickListener for each answer and display whether
+        // the answer is correct or incorrect
         Answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -185,13 +188,15 @@ public class QuizActivity extends AppCompatActivity {
         editor.putInt(SCORE_KEY, mScore);
 
     }
-
+    //Displaying the hint function with an AlertDialog
     public void showFlashcardDialog(Context context, String message, Boolean status) {
         AlertDialog.Builder flashcardDialog = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
 
 
         flashcardDialog.setCancelable(true);
+        //Set AlertDialog message
         flashcardDialog.setMessage(message);
+
         flashcardDialog.show();
     }
 

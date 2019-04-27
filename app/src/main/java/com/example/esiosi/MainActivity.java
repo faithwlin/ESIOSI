@@ -21,13 +21,14 @@ public class MainActivity extends Navigation implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Inflate the layout. Instantiate layout XML file
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contentView = inflater.inflate(R.layout.activity_main, null, false);
         drawer.addView(contentView, 0);
         navigationView.setCheckedItem(R.id.dashboardnav);
 
-        // Define the cards
+        // Define the cardviews
         osiLayersCard = (CardView) findViewById(R.id.osilayerscard);
         flashcardsCard = (CardView) findViewById(R.id.flashcardscard);
         quizCard = (CardView) findViewById(R.id.quizcard);
@@ -51,7 +52,7 @@ public class MainActivity extends Navigation implements View.OnClickListener {
     }
 
     @Override
-    // OnClick method will be called when a cardview is clicked
+    // Intents for the activity. OnClick method will be called when a cardview is clicked
     public void onClick(View v) {
         Intent i;
 

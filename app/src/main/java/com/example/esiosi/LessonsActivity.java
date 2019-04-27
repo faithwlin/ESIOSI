@@ -36,9 +36,11 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lessons);
 
+        //Define the TextViews
         introduction = (TextView) findViewById(R.id.introduction);
         content = (TextView) findViewById(R.id.content);
 
+        //Define YouTubePlayerView
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.player);
 
         Bundle bundle = getIntent().getExtras();
@@ -52,6 +54,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                 LessonsActivity.this.onBackPressed();
             }
         });
+        //Set data values
         if (i == 1) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Physical Layer");
@@ -62,7 +65,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     "\n" +
                     "The physical layer sometimes plays an important role in the effective sharing of available communication resources, and helps avoid contention among multiple users. It also handles the transmission rate to improve the flow of data between a sender and receiver.\n" +
                     "\n");
-
+        //Set data values
         } else if (i == 2) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Data Link Layer");
@@ -73,7 +76,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     "\n" +
                     "As described by the IEEE-802 LAN specification, the role of the LLC sublayer is to control data flow among various applications and services, as well as provide acknowledgement and error notification mechanisms. The LLC sublayer can then talk to a number of IEEE 802 MAC sublayers, which control access to the physical media for transport. It is also responsible for the physical addressing of frames. Two common MAC layer types include Ethernet and 802.11 wireless specifications. \n" +
                     "\n");
-
+        //Set data values
         } else if (i == 3) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Network Layer");
@@ -84,7 +87,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     "\n" +
                     "Network layer protocols exist in every host or router. The router examines the header fields of all the IP packets that pass through it. Internet Protocol and Netware IPX/SPX are the most common protocols associated with the network layer. In the OSI model, the network layer responds to requests from the layer above it (transport layer) and issues requests to the layer below it (data link layer). \n" +
                     "\n");
-
+        //Set data values
         } else if (i == 4) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Transport Layer");
@@ -95,7 +98,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     "\n" +
                     "Transport layers work transparently within the layers above to deliver and receive data without errors. The send side breaks application messages into segments and passes them on to the network layer. The receiving side then reassembles segments into messages and passes them to the application layer. \n" +
                     "\n");
-
+        //Set data values
         } else if (i == 5) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Session Layer");
@@ -108,7 +111,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     "\n" +
                     "The session layer supports full-duplex and half-duplex operations and creates procedures for checkpointing, adjournment, restart and termination. The session layer is also responsible for synchronizing information from different sources. For example, sessions are implemented in live television programs in which the audio and video streams emerging from two different sources are merged together. This avoids overlapping and silent broadcast time. \n" +
                     "\n");
-
+        //Set data values
         } else if (i == 6) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Presentation Layer");
@@ -119,7 +122,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     "\n" +
                     "The presentation layer follows data programming structure schemes developed for different languages and provides the real-time syntax required for communication between two objects such as layers, systems or networks. The data format should be acceptable by the next layers; otherwise, the presentation layer may not perform correctly. Network devices or components used by the presentation layer include redirectors and gateways. \n" +
                     "\n");
-
+        //Set data values
         } else if (i == 7) {
             youTubePlayerView.initialize(GOOGLE_API_KEY, this);
             toolbar.setTitle("Application Layer");

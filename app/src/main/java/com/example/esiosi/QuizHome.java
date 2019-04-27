@@ -22,6 +22,7 @@ public class QuizHome extends Navigation {
         drawer.addView(contentView, 0);
         navigationView.setCheckedItem(R.id.quiznav);
 
+        //Initialise UI ImageView and Intent to start Quiz
         ImageView startButton = (ImageView)findViewById(R.id.start);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override

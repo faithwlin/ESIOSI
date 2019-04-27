@@ -31,7 +31,6 @@ public class QuizActivity extends AppCompatActivity {
     private int attempts = 0;
     public int mScore = 0;
     private int questionNumber = 0;
-//    QuizDatabase quizDatabase;
     private ImageView button;
     private int highScore;
     public static final String SHARED_PREFERENCES = "sharedPreferences";
@@ -47,6 +46,7 @@ public class QuizActivity extends AppCompatActivity {
         //Define timer
         timer = findViewById(R.id.timer);
 
+        //Set countdown timer for 10 minutes, format changed to Minutes and Seconds
         new CountDownTimer(600000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -56,11 +56,16 @@ public class QuizActivity extends AppCompatActivity {
                                 TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
             }
 
+            //If time runs out, QuizComplete activity is initiated with Intent, along with score
             public void onFinish() {
-                timer.setText("done!");
+                timer.setText("Time's Up!");
+                Intent timesUp = new Intent(QuizActivity.this, QuizComplete.class);
+                timesUp.putExtra(TRANSFER_SCORE, mScore);
+                startActivity(timesUp);
             }
         }.start();
 
+        //Initialise variables
         QuestionNo = findViewById(R.id.QuestionNo);
         Question = findViewById(R.id.Question);
         Answer1 = findViewById(R.id.Answer1);
@@ -71,7 +76,6 @@ public class QuizActivity extends AppCompatActivity {
         button = (ImageView) findViewById(R.id.button);
 
 
-//        quizDatabase = new QuizDatabase(this);
 
         updateQuestion();
 
@@ -142,10 +146,10 @@ public class QuizActivity extends AppCompatActivity {
         });
 
     }
-
+    //Call method which changes question
     private void updateQuestion() {
 
-        if (attempts < 10) {
+        if (attempts < 10) { //To ensure only 10 questions are shown.
             Question.setText(quizQuestions.getQuestion(questionNumber));
             Answer1.setText(quizQuestions.getChoice1(questionNumber));
             Answer2.setText(quizQuestions.getChoice2(questionNumber));
@@ -163,13 +167,15 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+        //Checks with QuizQuestions class to see if answer was correct
         correctAnswer = quizQuestions.getCorrectAnswer(questionNumber);
 
+        //Finishes the quiz once 10 questions have been answered
         if (attempts == 10) {
             finish();
             updateScore(mScore);
-            Intent results = new Intent(getApplicationContext(), QuizComplete.class);
-            results.putExtra(TRANSFER_SCORE, mScore);
+            Intent results = new Intent(getApplicationContext(), QuizComplete.class); //Starts QuizComplete activity
+            results.putExtra(TRANSFER_SCORE, mScore); //Transfers score to show at QuizComplete activity
             startActivity(results);
 
         } else {
@@ -181,7 +187,7 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-
+    //Method to store the score as the user conducts quiz
     private void updateScore(int point) {
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
@@ -199,7 +205,7 @@ public class QuizActivity extends AppCompatActivity {
 
         flashcardDialog.show();
     }
-
+    //Method to update and store new highScore using Shared Preferences
     private void updateHighScore(int newHighScore) {
         highScore = newHighScore;
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);

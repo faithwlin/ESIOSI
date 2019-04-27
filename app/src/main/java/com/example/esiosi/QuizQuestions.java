@@ -1,6 +1,7 @@
 package com.example.esiosi;
 
 public class QuizQuestions {
+    //Store Question Numbers
     private String mQuestionNo[]={
             "Question 1",
             "Question 2",
@@ -14,6 +15,7 @@ public class QuizQuestions {
             "Question 10",
 
     };
+    //Store Questions
     private String mQuestions[] = {
             // Easy? Should we do 2 types of difficulties
             "The physical layer is concerned with what delivery?",
@@ -39,7 +41,7 @@ public class QuizQuestions {
             "10/10: Question 10 Question 10 Question 10 Question 10 Question 10 Question 10",
 
     };
-
+    //Store Hints
     private String mHints[] = {
             "The physical layer defines the means of transmitting raw bits.",
             "The physical layer deals with most of the network's physical connections.",
@@ -53,7 +55,7 @@ public class QuizQuestions {
             "Re-watch application layer lesson.",
 
     };
-
+    //Store Multiple Choice options
     private String mChoices [][] = {
             // Easy?
             {"bit-by-bit delivery", "process to process delivery", "application to application delivery", "none of the above"},
@@ -81,8 +83,10 @@ public class QuizQuestions {
 
     };
 
+    //Store correct answers
     private String mCorrectAnswers[] = {"bit-by-bit delivery", "all of the above", "none of the above", "error and diagnostics", "the network layer", "both TCP & UDP", "all UDP packets are treated independently by the transport layer", "all of the above", "port", "SMTP", "Answer 11", "Answer 12", "Answer 13", "Answer 14", "Answer 15", "Answer 16", "Answer 17", "Answer 18", "Answer 19", "Answer 20" };
 
+    //Getters
     public String getQuestionNo(int a){
         String questionNo = mQuestionNo[a];
         return questionNo;

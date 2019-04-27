@@ -138,7 +138,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     }
 
-
+    //Method which initalises Youtube Player with relevant Youtube video based on Toolbar Title
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
@@ -160,7 +160,7 @@ public class LessonsActivity extends YouTubeBaseActivity implements YouTubePlaye
         }
 
     }
-
+    //Show error code if API initialisation fails
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
         final int REQUEST_CODE = 1;

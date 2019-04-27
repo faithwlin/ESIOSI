@@ -48,7 +48,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         presentationImage.setOnClickListener(this);
         applicationImage.setOnClickListener(this);
 
-        //disable buttons
+        //Disable buttons
         datalinkImage.setEnabled(false);
         networkImage.setEnabled(false);
         transportImage.setEnabled(false);
@@ -102,7 +102,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
     @Override
     //On click method will be called when a cardview is clicked
-    //Enables next lesson when previous lesson is clicked
+    //Enables next lesson button when previous lesson button is clicked
     public void onClick(View v) {
         Intent i;
 
@@ -170,6 +170,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
     }
 
+    //save state of unlocked and locked buttons via shared preferences
     private void updateLesson(int lessonNEW) {
         lesson = lessonNEW;
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);

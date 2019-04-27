@@ -48,18 +48,20 @@ public class Profile extends Navigation {
         Email = findViewById(R.id.email);
         SignOut = findViewById(R.id.signout);
 
+        //get user details from Google sign in
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         String profileName = acct.getDisplayName();
         String profileEmail = acct.getEmail();
         Uri profilePhoto = acct.getPhotoUrl();
 
-
+        //set user details into user interface
         Name.setText(profileName);
         Email.setText("You are currently signed in as: " + profileEmail);
         if (profilePhoto != null) {
             Glide.with(this).load(profilePhoto).into(ProfilePic);
         }
 
+        //Define signout button
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

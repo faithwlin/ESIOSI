@@ -43,12 +43,13 @@ public class Profile extends Navigation {
         drawer.addView(contentView, 0);
         navigationView.setCheckedItem(R.id.profilenav);
 
+        //Define objects
         ProfilePic = findViewById(R.id.profilepic);
         Name = findViewById(R.id.name);
         Email = findViewById(R.id.email);
         SignOut = findViewById(R.id.signout);
 
-        //get user details from Google sign in
+        //Get user details from Google sign in
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         String profileName = acct.getDisplayName();
         String profileEmail = acct.getEmail();
@@ -61,7 +62,7 @@ public class Profile extends Navigation {
             Glide.with(this).load(profilePhoto).into(ProfilePic);
         }
 
-        //Define signout button
+        //Specify signout button to signout on click
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

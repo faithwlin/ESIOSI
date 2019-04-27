@@ -56,6 +56,7 @@ public class OSILayers extends Navigation implements View.OnClickListener {
         presentationImage.setEnabled(false);
         applicationImage.setEnabled(false);
 
+        //save state of unlocked and locked buttons via shared preferences
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         int s = preferences.getInt(LESSON_KEY, 0);
 
@@ -170,7 +171,6 @@ public class OSILayers extends Navigation implements View.OnClickListener {
 
     }
 
-    //save state of unlocked and locked buttons via shared preferences
     private void updateLesson(int lessonNEW) {
         lesson = lessonNEW;
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);

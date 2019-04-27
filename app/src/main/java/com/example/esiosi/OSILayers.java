@@ -97,6 +97,20 @@ public class OSILayers extends Navigation implements View.OnClickListener {
             sessionImage.setImageResource(R.drawable.sessioncolour2x);
             presentationImage.setEnabled(true);
             presentationImage.setImageResource(R.drawable.presentationcolour2x);
+
+        }
+
+        else if (s == 7) {
+            datalinkImage.setEnabled(true);
+            datalinkImage.setImageResource(R.drawable.datalinkcolor2x);
+            networkImage.setEnabled(true);
+            networkImage.setImageResource(R.drawable.networkcolour2x);
+            transportImage.setEnabled(true);
+            transportImage.setImageResource(R.drawable.transportcolour2x);
+            sessionImage.setEnabled(true);
+            sessionImage.setImageResource(R.drawable.sessioncolour2x);
+            presentationImage.setEnabled(true);
+            presentationImage.setImageResource(R.drawable.presentationcolour2x);
             applicationImage.setEnabled(true);
             applicationImage.setImageResource(R.drawable.applicationcolour2x);
         }
